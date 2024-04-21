@@ -34,7 +34,12 @@ function App() {
           {showAddFriend ? "close" : "Add Friend"}
         </Button>
       </div>
-      {selsctedFriennd && <FormSplitBill selsctedFriennd={selsctedFriennd} />}
+      {selsctedFriennd && (
+        <FormSplitBill
+          selsctedFriennd={selsctedFriennd}
+          key={setSelectedFriend.id}
+        />
+      )}
     </div>
   );
 }
